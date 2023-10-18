@@ -1,16 +1,14 @@
 package com.example.moviefan1;
 
 import androidx.appcompat.app.AppCompatActivity;
-import android.widget.SearchView;
+
 import android.os.Bundle;
 
-public class MainActivity extends AppCompatActivity {
+public class pantallaPerfil extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_pantalla_perfil);
     }
-    SearchView search_view;
-
 }
