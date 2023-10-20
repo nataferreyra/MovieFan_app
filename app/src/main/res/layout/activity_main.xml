@@ -252,8 +252,8 @@
 
     <SearchView
         android:id="@+id/busquedabarra"
-        android:layout_width="281dp"
-        android:layout_height="43dp"
+        android:layout_width="298dp"
+        android:layout_height="46dp"
         android:layout_marginTop="4dp"
         android:background="#40C0C0C0"
         app:layout_constraintEnd_toEndOf="parent"
