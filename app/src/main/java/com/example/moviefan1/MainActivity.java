@@ -77,6 +77,5 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
-    SearchView search_view;
 
 }
