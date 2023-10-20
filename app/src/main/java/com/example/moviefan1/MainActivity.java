@@ -69,6 +69,13 @@ public class MainActivity extends AppCompatActivity {
             Intent i=new Intent(MainActivity.this, loggin.class);
             startActivity(i);
         });
+
+        SearchView searchView = findViewById(R.id.busquedabarra);
+        searchView.setQuery("NO DESARROLADO POR EL MOMENTO NO USAR", false);
+
+
+
+
     }
     SearchView search_view;
 
