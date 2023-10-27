@@ -1,54 +1,218 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/coordinator_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".listas"
-    android:fillViewport="true">
+    android:background="#2C353A">
 
-    <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/app_bar_layout"
+    <TextView
+        android:id="@+id/barraNegra"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_anchor="@+id/app_bar_layout"
-        app:layout_anchorGravity="center"
+        android:layout_height="70dp"
         android:background="@color/black"
-        app:layout_scrollFlags="scroll|enterAlways|snap"
-        >
+        android:text=""
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0"/>
 
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="70dp"
-            android:layout_height="60dp"
-            android:layout_gravity="end"
-            app:srcCompat="@drawable/logomoviefan" />
+    <ImageView
+        android:id="@+id/logoMovieFan"
+        android:layout_width="89dp"
+        android:layout_height="70dp"
+        android:layout_gravity="right"
+        android:src="@drawable/logomoviefan"
+        app:layout_constraintEnd_toEndOf="@+id/barraNegra"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/barraNegra"
+        app:layout_constraintBottom_toBottomOf="@id/barraNegra"
+        app:layout_constraintHorizontal_bias="1"
+        />
 
-        <TextView
-            android:id="@+id/textView3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="top"
-            android:text="MovieFan"
-            android:textColor="#4CAF50"
-            android:textSize="24sp" />
+    <TextView
+        android:id="@+id/textoMovieFanEncabezado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MovieFan"
+        android:textColor="#4CAF50"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/barraNegra"
+        app:layout_constraintEnd_toStartOf="@id/logoMovieFan"
+        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintStart_toStartOf="@+id/barraNegra"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1" />
+
+    <TextView
+        android:id="@+id/textoPantalla"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Listas"
+        app:layout_constraintBottom_toBottomOf="@+id/barraNegra"
+        app:layout_constraintEnd_toEndOf="@+id/barraNegra"
+        app:layout_constraintStart_toStartOf="@+id/barraNegra"
+        app:layout_constraintTop_toTopOf="@+id/barraNegra"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintVertical_bias="1"
+        android:textColor="#4CAF50"
+        android:textSize="16sp"
+        android:layout_marginStart="5dp"
+        />
+
+    <TextView
+        android:id="@+id/favoritos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="FAVORITOS"
+        app:layout_constraintBottom_toTopOf="@+id/peli1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/barraNegra"
+        app:layout_constraintHorizontal_bias="0.03"
+        android:textColor="@color/white"/>
+
+    <TextView
+        android:id="@+id/vistas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="VISTAS"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/peli1"
+        app:layout_constraintBottom_toTopOf="@id/peli4"
+        app:layout_constraintHorizontal_bias="0.03"
+        android:textColor="@color/white"/>
+
+    <TextView
+        android:id="@+id/porVer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="POR VER"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.03"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/peli4"
+        app:layout_constraintBottom_toTopOf="@id/peli7"
+        android:textColor="@color/white"/>
+
+    <Button
+        android:id="@+id/btNuevaLista"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:text="Nueva Lista"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/peli7"
+        android:backgroundTint="#4CAF50"
+        />
+
+    <ImageButton
+        android:id="@+id/peli1"
+        android:layout_width="105dp"
+        android:layout_height="129dp"
+        android:src="@drawable/venom2"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/peli2"
+        app:layout_constraintTop_toBottomOf="@id/favoritos"
+        app:layout_constraintBottom_toTopOf="@id/vistas"
+        android:background="@android:color/transparent"
+        />
+
+    <ImageView
+        android:id="@+id/peli2"
+        android:layout_width="105dp"
+        android:layout_height="129dp"
+        android:src="@drawable/acero"
+        app:layout_constraintTop_toBottomOf="@id/favoritos"
+        app:layout_constraintBottom_toTopOf="@id/vistas"
+        app:layout_constraintStart_toEndOf="@id/peli1"
+        app:layout_constraintEnd_toStartOf="@id/peli3"
+        android:scaleType="centerCrop"/>
+
+    <ImageView
+        android:id="@+id/peli3"
+        android:layout_width="105dp"
+        android:layout_height="129dp"
+        app:layout_constraintTop_toBottomOf="@id/favoritos"
+        app:layout_constraintBottom_toTopOf="@id/vistas"
+        app:layout_constraintStart_toEndOf="@id/peli2"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:src="@drawable/napoleon"
+        android:scaleType="centerCrop"/>
+
+    <ImageView
+        android:id="@+id/peli4"
+        android:layout_width="105dp"
+        android:layout_height="129dp"
+        app:layout_constraintBottom_toTopOf="@+id/porVer"
+        app:layout_constraintEnd_toStartOf="@+id/peli5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vistas"
+        android:src="@drawable/joker"
+        android:scaleType="centerCrop"/>
+
+    <ImageView
+        android:id="@+id/peli5"
+        android:layout_width="105dp"
+        android:layout_height="129dp"
+        app:layout_constraintEnd_toStartOf="@+id/peli6"
+        app:layout_constraintTop_toBottomOf="@+id/vistas"
+        android:src="@drawable/openheimer"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toTopOf="@id/porVer"
+        app:layout_constraintStart_toEndOf="@id/peli4"/>
+
+    <ImageView
+        android:id="@+id/peli6"
+        android:layout_width="105dp"
+        android:layout_height="129dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vistas"
+        android:src="@drawable/robocop"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toTopOf="@id/porVer"
+        app:layout_constraintStart_toEndOf="@id/peli5"/>
+
+    <ImageView
+        android:id="@+id/peli7"
+        android:layout_width="105dp"
+        android:layout_height="129dp"
+        app:layout_constraintBottom_toTopOf="@+id/btNuevaLista"
+        app:layout_constraintEnd_toStartOf="@+id/peli8"
+        app:layout_constraintStart_toStartOf="parent"
+        android:src="@drawable/septimo"
+        android:scaleType="centerCrop"
+        app:layout_constraintTop_toBottomOf="@id/porVer"
+        android:background="@android:color/transparent"
+        />
+
+    <ImageView
+        android:id="@+id/peli8"
+        android:layout_width="105dp"
+        android:layout_height="129dp"
+        app:layout_constraintBottom_toTopOf="@+id/btNuevaLista"
+        app:layout_constraintEnd_toStartOf="@+id/peli9"
+        app:layout_constraintTop_toBottomOf="@+id/porVer"
+        android:src="@drawable/obesion"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toEndOf="@id/peli7"/>
+
+    <ImageView
+        android:id="@+id/peli9"
+        android:layout_width="105dp"
+        android:layout_height="129dp"
+        app:layout_constraintBottom_toTopOf="@+id/btNuevaLista"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/porVer"
+        android:src="@drawable/quepasoayer"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toEndOf="@id/peli8"/>
 
 
-        <!-- Aquí puedes agregar elementos como un Toolbar o una imagen de encabezado -->
-
-    </com.google.android.material.appbar.AppBarLayout>
-
-    <androidx.core.widget.NestedScrollView
-        android:id="@+id/nested_scroll_view"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-
-        <!-- Contenido desplazable aquí -->
-
-    </androidx.core.widget.NestedScrollView>
-
-
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

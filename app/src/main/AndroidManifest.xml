@@ -13,6 +13,9 @@
         android:theme="@style/Theme.MovieFan1"
         tools:targetApi="34">
         <activity
+            android:name=".vistaPelicula2"
+            android:exported="false" />
+        <activity
             android:name=".catalogo"
             android:exported="false" />
         <activity

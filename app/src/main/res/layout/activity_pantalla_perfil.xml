@@ -4,41 +4,193 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".pantallaPerfil">
+    tools:context=".pantallaPerfil"
+    android:background="#2C353A">
+
+    <TextView
+        android:id="@+id/barraNegra"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/black"
+        android:text=""
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0"/>
+
+    <ImageView
+        android:id="@+id/logoMovieFan"
+        android:layout_width="89dp"
+        android:layout_height="70dp"
+        android:layout_gravity="right"
+        android:src="@drawable/logomoviefan"
+        app:layout_constraintEnd_toEndOf="@+id/barraNegra"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/barraNegra"
+        app:layout_constraintBottom_toBottomOf="@id/barraNegra"
+        app:layout_constraintHorizontal_bias="1"
+        />
+
+    <TextView
+        android:id="@+id/textoMovieFanEncabezado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MovieFan"
+        android:textColor="#4CAF50"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/barraNegra"
+        app:layout_constraintEnd_toStartOf="@id/logoMovieFan"
+        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintStart_toStartOf="@+id/barraNegra"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1" />
+
+    <TextView
+        android:id="@+id/textoPantalla"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Perfil"
+        app:layout_constraintBottom_toBottomOf="@+id/barraNegra"
+        app:layout_constraintEnd_toEndOf="@+id/barraNegra"
+        app:layout_constraintStart_toStartOf="@+id/barraNegra"
+        app:layout_constraintTop_toTopOf="@+id/barraNegra"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintVertical_bias="1"
+        android:textColor="#4CAF50"
+        android:textSize="16sp"
+        android:layout_marginStart="5dp"
+        />
+
+    <TextView
+        android:id="@+id/textoNombreUsuario"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:text="RaffaTN"
+        app:layout_constraintBottom_toTopOf="@+id/textoMail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imagenPerfil"
+        app:layout_constraintTop_toBottomOf="@+id/barraNegra"
+        android:textColor="@color/black"
+        android:background="@color/white"/>
+
+    <ImageView
+        android:id="@+id/imagenPerfil"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/barraNegra"
+        app:srcCompat="@drawable/ortu"
+        app:layout_constraintVertical_bias="0.05"
+        />
+
+    <TextView
+        android:id="@+id/textoMail"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:text="raffaTortuga@iessantafe.edu.ar"
+        app:layout_constraintBottom_toTopOf="@+id/perfil1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imagenPerfil"
+        app:layout_constraintTop_toBottomOf="@id/textoNombreUsuario"
+        android:textColor="@color/black"
+        android:background="@color/white"
+        />
+
+    <TextView
+        android:id="@+id/perfil1"
+        android:layout_width="300dp"
+        android:layout_height="16dp"
+        android:background="@color/white"
+        android:text="GESTIÓN DE DATOS"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toTopOf="@+id/perfil2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imagenPerfil"
+        app:layout_constraintVertical_bias="0.15" />
+
+    <TextView
+        android:id="@+id/perfil2"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:text="AMIGOS"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toTopOf="@+id/perfil3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/perfil1" />
+
+    <TextView
+        android:id="@+id/perfil3"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:text="CERRAR CESIÓN"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toTopOf="@+id/perfil4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/perfil2" />
+
+    <TextView
+        android:id="@+id/perfil4"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:text="ELIMINAR CUENTA"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toTopOf="@id/btCatalogo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/perfil3" />
+
 
     <Button
-        android:id="@+id/perfillista"
+        android:id="@+id/btLista"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/Lista"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.409" />
+        app:layout_constraintStart_toEndOf="@id/btCatalogo"
+        app:layout_constraintTop_toBottomOf="@id/perfil4"
+        android:backgroundTint="#4CAF50"
+         />
 
     <Button
-        android:id="@+id/perfCatalog"
+        android:id="@+id/btCatalogo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Catalogo"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.499" />
+        app:layout_constraintEnd_toStartOf="@id/btLista"
+        app:layout_constraintStart_toEndOf="@id/btHome"
+        app:layout_constraintTop_toBottomOf="@id/perfil4"
+        android:backgroundTint="#4CAF50"
+        />
 
     <Button
-        android:id="@+id/perfHome"
+        android:id="@+id/btHome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Home"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintEnd_toStartOf="@id/btCatalogo"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.582" />
+        app:layout_constraintTop_toBottomOf="@id/perfil4"
+        android:backgroundTint="#4CAF50"
+         />
 </androidx.constraintlayout.widget.ConstraintLayout>

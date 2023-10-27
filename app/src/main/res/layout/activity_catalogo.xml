@@ -1,53 +1,174 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-
-
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".catalogo"
+    android:background="#2C353A">
 
-    <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/appbar"
-        android:layout_height="192dp"
-        android:layout_width="match_parent">
-
-        <com.google.android.material.appbar.CollapsingToolbarLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:toolbarId="@+id/toolbar"
-            app:layout_scrollFlags="scroll|exitUntilCollapsed"
-
-            app:contentScrim="?attr/colorPrimary">
-
-
-            <androidx.appcompat.widget.Toolbar
-                android:id="@+id/toolbar"
-                android:layout_height="?attr/actionBarSize"
-                android:layout_width="match_parent"
-                android:background="@color/black"
-                >
-            </androidx.appcompat.widget.Toolbar>
-
-
-
-        </com.google.android.material.appbar.CollapsingToolbarLayout>
-
-    </com.google.android.material.appbar.AppBarLayout>
-
-    <androidx.core.widget.NestedScrollView
+    <TextView
+        android:id="@+id/barraNegra"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+        android:layout_height="70dp"
+        android:background="@color/black"
+        android:text=""
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0"/>
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            tools:context=".catalogo">
+    <ImageView
+        android:id="@+id/logoMovieFan"
+        android:layout_width="89dp"
+        android:layout_height="70dp"
+        android:src="@drawable/logomoviefan"
+        app:layout_constraintEnd_toEndOf="@+id/barraNegra"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/barraNegra"
+        app:layout_constraintBottom_toBottomOf="@id/barraNegra"
+        app:layout_constraintHorizontal_bias="1"
+        />
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/textoMovieFanEncabezado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MovieFan"
+        android:textColor="#4CAF50"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/barraNegra"
+        app:layout_constraintEnd_toStartOf="@id/logoMovieFan"
+        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintStart_toStartOf="@+id/barraNegra"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1" />
 
-    </androidx.core.widget.NestedScrollView>
+    <TextView
+        android:id="@+id/textoPantalla"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Catálogo"
+        app:layout_constraintBottom_toBottomOf="@+id/barraNegra"
+        app:layout_constraintEnd_toEndOf="@+id/barraNegra"
+        app:layout_constraintStart_toStartOf="@+id/barraNegra"
+        app:layout_constraintTop_toTopOf="@+id/barraNegra"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintVertical_bias="1"
+        android:textColor="#4CAF50"
+        android:textSize="16sp"
+        android:layout_marginStart="5dp"
+        />
+
+    <ImageButton
+        android:id="@+id/peeli1"
+        android:layout_width="105dp"
+        android:layout_height="129dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/barraNegra"
+        android:src="@drawable/marvels"
+        android:scaleType="centerCrop"
+        android:background="@android:color/transparent"
+        app:layout_constraintEnd_toStartOf="@id/peeli2"
+        app:layout_constraintBottom_toTopOf="@id/peeli4"/>
+
+    <ImageView
+        android:id="@+id/peeli2"
+        android:layout_width="105dp"
+        android:layout_height="129dp"
+        app:layout_constraintStart_toEndOf="@+id/peeli1"
+        app:layout_constraintTop_toBottomOf="@+id/barraNegra"
+        android:src="@drawable/venom2"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toStartOf="@id/peeli3"
+        app:layout_constraintBottom_toTopOf="@id/peeli5"
+        />
+
+    <ImageView
+        android:id="@+id/peeli3"
+        android:layout_width="105dp"
+        android:layout_height="129dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/peeli2"
+        app:layout_constraintTop_toBottomOf="@+id/barraNegra"
+        android:src="@drawable/robocop"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toTopOf="@id/peeli6"/>
+
+    <ImageView
+        android:id="@+id/peeli4"
+        android:layout_width="105dp"
+        android:layout_height="129dp"
+        app:layout_constraintEnd_toStartOf="@+id/peeli5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/peeli1"
+        android:src="@drawable/quepasoayer"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toTopOf="@id/peeli7"/>
+
+    <ImageView
+        android:id="@+id/peeli5"
+        android:layout_width="105dp"
+        android:layout_height="129dp"
+        app:layout_constraintEnd_toStartOf="@+id/peeli6"
+        app:layout_constraintTop_toBottomOf="@+id/peeli2"
+        android:src="@drawable/venecia"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toEndOf="@id/peeli4"
+        app:layout_constraintBottom_toTopOf="@id/peeli8"/>
+
+    <ImageView
+        android:id="@+id/peeli6"
+        android:layout_width="105dp"
+        android:layout_height="129dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/peeli3"
+        android:src="@drawable/openheimer"
+        app:layout_constraintStart_toEndOf="@id/peeli5"
+        app:layout_constraintBottom_toTopOf="@id/peeli9"/>
+
+    <ImageView
+        android:id="@+id/peeli7"
+        android:layout_width="105dp"
+        android:layout_height="129dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/peeli8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/peeli4"
+        android:src="@drawable/indestruc"
+        android:scaleType="centerCrop"/>
+
+    <ImageView
+        android:id="@+id/peeli8"
+        android:layout_width="105dp"
+        android:layout_height="129dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/peeli9"
+        app:layout_constraintTop_toBottomOf="@+id/peeli5"
+        android:src="@drawable/cerrar"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toEndOf="@id/peeli7"/>
+
+    <ImageView
+        android:id="@+id/peeli9"
+        android:layout_width="105dp"
+        android:layout_height="129dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/peeli6"
+        android:src="@drawable/maestro"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toEndOf="@id/peeli8"/>
+
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="31dp"
+        android:layout_height="42dp"
+        app:srcCompat="@drawable/rayitas"
+        tools:layout_editor_absoluteX="5dp"
+        tools:layout_editor_absoluteY="70dp" />
 
 
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
+

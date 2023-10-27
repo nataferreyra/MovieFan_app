@@ -13,9 +13,9 @@ public class pantallaPerfil extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pantalla_perfil);
 
-        Button listap=findViewById(R.id.perfillista);
-        Button pcatalog=findViewById(R.id.perfCatalog);
-        Button phome=findViewById(R.id.perfHome);
+        Button listap=findViewById(R.id.btLista);
+        Button pcatalog=findViewById(R.id.btCatalogo);
+        Button phome=findViewById(R.id.btHome);
 
         listap.setOnClickListener(view -> {
             Intent i=new Intent(pantallaPerfil.this, listas.class);
