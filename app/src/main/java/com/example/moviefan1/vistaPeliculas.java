@@ -2,14 +2,12 @@ package com.example.moviefan1;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.AlertDialog;
+import android.graphics.Color;
 import android.os.Bundle;
-import android.view.MenuItem;
 import android.widget.Button;
 import android.view.View;
 import android.widget.ImageButton;
-import android.widget.ImageView;
-import android.widget.PopupMenu;
-import android.widget.Toast;
 
 public class vistaPeliculas extends AppCompatActivity {
 
@@ -19,6 +17,32 @@ public class vistaPeliculas extends AppCompatActivity {
         setContentView(R.layout.activity_vista_peliculas);
 
         Button aniadirPeli = findViewById(R.id.botonAniadirComentario);
+        ImageButton lst=findViewById(R.id.botonAniadirLista);
+
+        lst.setOnClickListener(v -> {
+            AlertDialog.Builder builder = new AlertDialog.Builder(vistaPeliculas.this);
+            View customView = getLayoutInflater().inflate(R.layout.popup_layout, null);
+            builder.setView(customView);
+
+            AlertDialog dialog = builder.create();
+
+            Button botonfv = customView.findViewById(R.id.botonfav);
+            Button botonvs = customView.findViewById(R.id.botonvis);
+            Button botonvr = customView.findViewById(R.id.botonxver);
+            Button botonln = customView.findViewById(R.id.botonnlist);
+            botonfv.setBackgroundColor(Color.parseColor("#4CAF50"));
+            botonln.setBackgroundColor(Color.parseColor("#4CAF50"));
+            botonvr.setBackgroundColor(Color.parseColor("#4CAF50"));
+            botonvs.setBackgroundColor(Color.parseColor("#4CAF50"));
+
+
+            botonfv.setOnClickListener(null);
+            botonvs.setOnClickListener(null);
+            botonvr.setOnClickListener(null);
+            botonln.setOnClickListener(null);
+
+            dialog.show();
+        });
 
 
 

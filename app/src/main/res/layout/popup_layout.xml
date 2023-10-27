@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp"
+        tools:ignore="MissingConstraints">
+
+        <Button
+            android:id="@+id/botonfav"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Favoritos"
+            android:drawableEnd="@android:drawable/ic_input_add" />
+
+        <Button
+            android:id="@+id/botonvis"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Vistas"
+            android:drawableEnd="@android:drawable/ic_input_add" />
+
+        <Button
+            android:id="@+id/botonxver"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Por Ver"
+            android:drawableEnd="@android:drawable/ic_input_add" />
+
+        <Button
+            android:id="@+id/botonnlist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nueva Lista"
+            android:drawableEnd="@android:drawable/ic_input_add" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
