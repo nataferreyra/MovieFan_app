@@ -5,5 +5,6 @@
     <string name="desc_ib_perfil">la foto de perfil del usuario</string>
     <string name="botonAniadirLista">boton para aniadir pelicula a una lista</string>
     <string name="ibPlataformaDispo">Plataforma en la que se encuentra disponible</string>
+    <string name="Lista">Lista</string>
 
 </resources>
