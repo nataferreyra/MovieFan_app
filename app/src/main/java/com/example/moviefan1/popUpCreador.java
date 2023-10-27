@@ -43,9 +43,8 @@ public class popUpCreador {
         textocalculo.setPadding(0, 20, 0, 0);
         layt.addView(textocalculo);
 
-        // Configuración de un EditText y un botón para realizar el cálculo
-        EditText editText = new EditText(context);
-        layt.addView(editText);
+        EditText texto = new EditText(context);
+        layt.addView(texto);
 
         Button botoncalculo = new Button(context);
         botoncalculo.setText("Precio Ars");
@@ -55,7 +54,7 @@ public class popUpCreador {
         layt.addView(resultTextView);
 
         botoncalculo.setOnClickListener(v -> {
-            String input = editText.getText().toString();
+            String input = texto.getText().toString();
             if (!input.isEmpty()) {
                 double value = Double.parseDouble(input);
                 double result = value * precio;
