@@ -3,5 +3,7 @@
     <string name="desc_ib_peliculas">PelículasHome</string>
     <string name="desc_ib_plataformas">plataformas del home</string>
     <string name="desc_ib_perfil">la foto de perfil del usuario</string>
+    <string name="botonAniadirLista">boton para aniadir pelicula a una lista</string>
+    <string name="ibPlataformaDispo">Plataforma en la que se encuentra disponible</string>
 
 </resources>

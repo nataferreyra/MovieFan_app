@@ -16,125 +16,280 @@
         android:layout_height="wrap_content"
         tools:context=".vistaPeliculas">
 
-        <ImageButton
-            android:id="@+id/imageButton"
+        <ImageView
+            android:id="@+id/imagenPelicula"
             android:layout_width="117dp"
             android:layout_height="181dp"
             android:src="@android:drawable/btn_star"
-            tools:layout_editor_absoluteX="37dp"
-            tools:layout_editor_absoluteY="98dp" />
+            app:layout_constraintBottom_toTopOf="@+id/botonAniadirLista"
+            app:layout_constraintEnd_toStartOf="@+id/descripcionPelicula"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tituloPelicula" />
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/descripcionPelicula"
             android:layout_width="196dp"
             android:layout_height="181dp"
             android:text="TextView"
-            tools:layout_editor_absoluteX="189dp"
-            tools:layout_editor_absoluteY="98dp" />
+            app:layout_constraintBottom_toTopOf="@+id/botonAniadirLista"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tituloPelicula"
+            app:layout_constraintStart_toEndOf="@id/imagenPelicula"/>
 
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/tituloPelicula"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="TextView"
-            tools:layout_editor_absoluteX="64dp"
-            tools:layout_editor_absoluteY="72dp" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+            app:layout_constraintBottom_toTopOf="@id/imagenPelicula"
+            app:layout_constraintHorizontal_bias="0.18"/>
 
         <TextView
-            android:id="@+id/textView4"
+            android:id="@+id/textoDisponible"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="TextView"
-            tools:layout_editor_absoluteX="16dp"
-            tools:layout_editor_absoluteY="352dp" />
+            app:layout_constraintBottom_toTopOf="@+id/plataformasDisponible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/botonAniadirLista"
+            app:layout_constraintHorizontal_bias="0.05"/>
 
-        <Button
-            android:id="@+id/button2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Button"
-            tools:layout_editor_absoluteX="294dp"
-            tools:layout_editor_absoluteY="286dp" />
 
         <TextView
-            android:id="@+id/textView5"
+            android:id="@+id/apartadoComentarios"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="TextView"
             tools:layout_editor_absoluteX="19dp"
-            tools:layout_editor_absoluteY="472dp" />
+            tools:layout_editor_absoluteY="472dp"
+            app:layout_constraintTop_toBottomOf="@id/plataformasDisponible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/imagenPerfilComentario1"
+            app:layout_constraintHorizontal_bias="0.05"
+            app:layout_constraintVertical_bias="0.6"
+            />
 
         <ImageButton
-            android:id="@+id/imageButton2"
+            android:id="@+id/plataformasDisponible"
             android:layout_width="72dp"
             android:layout_height="70dp"
-            tools:layout_editor_absoluteX="37dp"
-            tools:layout_editor_absoluteY="385dp"
+            android:contentDescription="@string/ibPlataformaDispo"
+            app:layout_constraintBottom_toTopOf="@id/apartadoComentarios"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.15"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textoDisponible"
             tools:srcCompat="@tools:sample/avatars" />
 
         <ImageView
-            android:id="@+id/imageView3"
+            android:id="@+id/imagenPerfilComentario1"
             android:layout_width="36dp"
             android:layout_height="36dp"
             tools:layout_editor_absoluteX="37dp"
             tools:layout_editor_absoluteY="513dp"
-            tools:srcCompat="@tools:sample/avatars" />
+            tools:srcCompat="@tools:sample/avatars"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/apartadoComentarios"
+            app:layout_constraintEnd_toStartOf="@id/textoComentario1"
+            app:layout_constraintBottom_toTopOf="@id/imagenPerfilComentario2"
+            app:layout_constraintHorizontal_bias="0.7"/>
 
         <TextView
-            android:id="@+id/textView6"
+            android:id="@+id/textoComentario1"
             android:layout_width="254dp"
             android:layout_height="36dp"
             android:text="TextView"
-            tools:layout_editor_absoluteX="91dp"
-            tools:layout_editor_absoluteY="513dp" />
+            app:layout_constraintBottom_toTopOf="@+id/textoComentario2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/imagenPerfilComentario1"
+            app:layout_constraintTop_toBottomOf="@+id/apartadoComentarios"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"/>
 
         <TextView
-            android:id="@+id/textView7"
+            android:id="@+id/textoComentario2"
             android:layout_width="254dp"
             android:layout_height="36dp"
             android:text="TextView"
-            tools:layout_editor_absoluteX="91dp"
-            tools:layout_editor_absoluteY="565dp" />
+            app:layout_constraintBottom_toTopOf="@+id/textoComentario3"
+            app:layout_constraintStart_toEndOf="@+id/imagenPerfilComentario2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textoComentario1"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"/>
 
         <ImageView
-            android:id="@+id/imageView4"
+            android:id="@+id/imagenPerfilComentario2"
             android:layout_width="36dp"
             android:layout_height="36dp"
-            tools:layout_editor_absoluteX="37dp"
-            tools:layout_editor_absoluteY="565dp"
-            tools:srcCompat="@tools:sample/avatars" />
+            app:layout_constraintBottom_toTopOf="@+id/imagenPerfilComentario3"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:srcCompat="@tools:sample/avatars"
+            app:layout_constraintTop_toBottomOf="@id/imagenPerfilComentario1"
+            app:layout_constraintEnd_toStartOf="@id/textoComentario1"
+            />
 
         <ImageView
-            android:id="@+id/imageView5"
+            android:id="@+id/imagenPerfilComentario3"
             android:layout_width="36dp"
             android:layout_height="36dp"
-            tools:layout_editor_absoluteX="37dp"
-            tools:layout_editor_absoluteY="617dp"
-            tools:srcCompat="@tools:sample/avatars" />
+            app:layout_constraintBottom_toTopOf="@+id/imagenPerfilComentario4"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:srcCompat="@tools:sample/avatars"
+            app:layout_constraintTop_toBottomOf="@id/imagenPerfilComentario2"
+            app:layout_constraintEnd_toStartOf="@id/textoComentario3"/>
 
         <ImageView
-            android:id="@+id/imageView6"
+            android:id="@+id/imagenPerfilComentario4"
             android:layout_width="36dp"
             android:layout_height="36dp"
-            tools:layout_editor_absoluteX="37dp"
+            app:layout_constraintStart_toStartOf="parent"
             tools:layout_editor_absoluteY="669dp"
-            tools:srcCompat="@tools:sample/avatars" />
+            tools:srcCompat="@tools:sample/avatars"
+            app:layout_constraintTop_toBottomOf="@id/imagenPerfilComentario3"
+            app:layout_constraintEnd_toStartOf="@id/textoComentario4"
+            app:layout_constraintBottom_toTopOf="@id/botonAniadirComentario"/>
 
         <TextView
-            android:id="@+id/textView8"
+            android:id="@+id/textoComentario3"
             android:layout_width="254dp"
             android:layout_height="36dp"
             android:text="TextView"
-            tools:layout_editor_absoluteX="91dp"
-            tools:layout_editor_absoluteY="617dp" />
+            app:layout_constraintBottom_toTopOf="@+id/textoComentario4"
+            app:layout_constraintStart_toEndOf="@+id/imagenPerfilComentario3"
+            app:layout_constraintTop_toBottomOf="@id/textoComentario2"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"/>
 
         <TextView
-            android:id="@+id/textView9"
+            android:id="@+id/textoComentario4"
             android:layout_width="254dp"
             android:layout_height="36dp"
             android:text="TextView"
-            tools:layout_editor_absoluteX="91dp"
-            tools:layout_editor_absoluteY="669dp" />
+            app:layout_constraintStart_toEndOf="@+id/imagenPerfilComentario4"
+            tools:layout_editor_absoluteY="669dp"
+            app:layout_constraintTop_toBottomOf="@id/textoComentario3"
+            app:layout_constraintBottom_toTopOf="@id/botonAniadirComentario"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"/>
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+          >
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TextView" />
+
+            <TextView
+                android:id="@+id/textoMovieFanEncabezado"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="MovieFan"
+                />
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:src="@drawable/logomoviefan"
+
+                />
+
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/botonAniadirLista"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:clickable="true"
+            android:contentDescription="@string/botonAniadirLista"
+            android:onClick="mostarPopUp"
+            android:src="@drawable/icono_aniadir"
+            app:layout_anchor="@id/descripcionPelicula"
+            app:layout_constraintBottom_toTopOf="@+id/textoDisponible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.89"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/descripcionPelicula" />
+
+        <!--        <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--            android:id="@+id/botonAniadirLista"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:clickable="true"-->
+<!--            android:onClick="mostarPopUp"-->
+<!--            android:src="@drawable/icono_aniadir"-->
+<!--            app:layout_anchor="@id/descripcionPelicula"-->
+<!--            app:layout_constraintBottom_toTopOf="@+id/textoDisponible"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintHorizontal_bias="0.89"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@id/descripcionPelicula" />-->
+
+        <TextView
+            android:id="@+id/generoPelicula"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            app:layout_constraintTop_toBottomOf="@id/imagenPelicula"
+            app:layout_constraintBottom_toTopOf="@id/textoDisponible"
+            app:layout_constraintEnd_toStartOf="@id/botonAniadirLista"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.13"
+            app:layout_constraintVertical_bias="0.2"/>
+
+        <Button
+            android:id="@+id/botonAniadirComentario"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:text="Comentar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textoComentario4" />
+
+        <TextView
+            android:id="@+id/textoCalificacionPro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            app:layout_constraintTop_toBottomOf="@id/imagenPelicula"
+            app:layout_constraintBottom_toTopOf="@id/textoCalificacionUsuarios"
+            app:layout_constraintStart_toEndOf="@id/generoPelicula"
+            app:layout_constraintEnd_toStartOf="@id/botonAniadirLista"
+            app:layout_constraintHorizontal_bias="0.05"/>
+
+        <TextView
+            android:id="@+id/textoCalificacionUsuarios"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            app:layout_constraintTop_toBottomOf="@id/generoPelicula"
+            app:layout_constraintBottom_toTopOf="@id/textoDisponible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/botonAniadirLista"
+            app:layout_constraintHorizontal_bias="0.13"
+            />
+
+
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
