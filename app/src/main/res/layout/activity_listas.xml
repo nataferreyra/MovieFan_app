@@ -45,11 +45,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <ImageButton
-            android:id="@+id/imageButton2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            tools:srcCompat="@tools:sample/avatars" />
+
         <!-- Contenido desplazable aquí -->
 
     </androidx.core.widget.NestedScrollView>

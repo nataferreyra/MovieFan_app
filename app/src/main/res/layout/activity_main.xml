@@ -118,7 +118,10 @@
         app:layout_constraintEnd_toStartOf="@+id/pelicula2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textoEstrenos"
-        tools:srcCompat="@tools:sample/avatars" />
+        android:src="@drawable/marvels"
+        android:scaleType="centerCrop"
+        android:background="@android:color/transparent"
+        />
 
     <ImageButton
         android:id="@+id/pelicula2"
@@ -129,7 +132,10 @@
         app:layout_constraintEnd_toStartOf="@+id/pelicula3"
         app:layout_constraintStart_toEndOf="@+id/pelicula1"
         app:layout_constraintTop_toBottomOf="@+id/textoEstrenos"
-        tools:srcCompat="@tools:sample/avatars" />
+        android:src="@drawable/napoleon"
+        android:scaleType="centerCrop"
+        android:background="@android:color/transparent"
+        />
 
     <ImageButton
         android:id="@+id/pelicula3"
@@ -140,7 +146,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/pelicula2"
         app:layout_constraintTop_toBottomOf="@+id/textoEstrenos"
-        tools:srcCompat="@tools:sample/avatars" />
+        android:src="@drawable/wish"
+        android:scaleType="centerCrop"
+        android:background="@android:color/transparent"/>
 
     <ImageButton
         android:id="@+id/pelicula4"
@@ -151,7 +159,10 @@
         app:layout_constraintEnd_toStartOf="@+id/pelicula5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/pelicula1"
-        tools:srcCompat="@tools:sample/avatars" />
+        android:src="@drawable/indestruc"
+        android:scaleType="centerCrop"
+        android:background="@android:color/transparent"
+        />
 
     <ImageButton
         android:id="@+id/pelicula5"
@@ -161,9 +172,10 @@
         app:layout_constraintBottom_toTopOf="@id/textoPlataformas"
         app:layout_constraintEnd_toStartOf="@+id/pelicula6"
         app:layout_constraintStart_toEndOf="@+id/pelicula4"
-
         app:layout_constraintTop_toBottomOf="@id/pelicula2"
-        tools:srcCompat="@tools:sample/avatars" />
+        android:src="@drawable/yogos"
+        android:scaleType="centerCrop"
+        android:background="@android:color/transparent"/>
 
     <ImageButton
         android:id="@+id/pelicula6"
@@ -174,7 +186,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/pelicula5"
         app:layout_constraintTop_toBottomOf="@+id/pelicula3"
-        tools:srcCompat="@tools:sample/avatars" />
+        android:src="@drawable/assdelaluna"
+        android:scaleType="centerCrop"
+        android:background="@android:color/transparent"/>
 
     <TextView
         android:id="@+id/textoPlataformas"
@@ -188,7 +202,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/pelicula4" />
+        app:layout_constraintTop_toBottomOf="@id/pelicula4"
+        />
 
     <ImageButton
         android:id="@+id/plataforma1"
@@ -291,14 +306,15 @@
         android:layout_marginRight="7dp"
         android:background="@android:color/transparent"
         android:contentDescription="@string/desc_ib_perfil"
-        android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1"
         app:layout_constraintStart_toEndOf="@id/busquedabarra"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0"
-        tools:srcCompat="@tools:sample/avatars" />
+        android:src="@drawable/ortu"
+        android:scaleType="centerCrop"
+        />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

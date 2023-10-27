@@ -9,7 +9,8 @@
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toTopOf="parent"
-    android:fillViewport="true">
+    android:fillViewport="true"
+    android:background="#2C353A">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -18,9 +19,10 @@
 
         <ImageView
             android:id="@+id/imagenPelicula"
-            android:layout_width="117dp"
-            android:layout_height="181dp"
-            android:src="@android:drawable/btn_star"
+            android:layout_width="124dp"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/marvels"
             app:layout_constraintBottom_toTopOf="@+id/botonAniadirLista"
             app:layout_constraintEnd_toStartOf="@+id/descripcionPelicula"
             app:layout_constraintStart_toStartOf="parent"
@@ -28,42 +30,49 @@
 
         <TextView
             android:id="@+id/descripcionPelicula"
-            android:layout_width="196dp"
-            android:layout_height="181dp"
-            android:text="TextView"
+            android:layout_width="222dp"
+            android:layout_height="wrap_content"
+            android:text="Carol Danvers, alias Capitana Marvel, ha recuperado su identidad de los tiránicos Kree y se ha vengado de la Inteligencia Suprema. Pero las consecuencias imprevistas hacen que Carol cargue con el peso de un universo desestabilizado. Cuando sus deberes la envían a un agujero de gusano anómalo vinculado a un revolucionario Kree, sus poderes se enredan con los de la superfan oriunda de la ciudad de Jersey, Kamala Khan, alias Ms. Marvel, y la sobrina distanciada de Carol, la ahora astronauta de S.A.B.E.R., la Capitana Monica Rambeau. Juntos, este trío improbable deberá formar equipo y aprender a trabajar en conjunto para salvar el universo como THE MARVELS"
+            android:textColor="@color/white"
+            android:textSize="11sp"
+            android:verticalScrollbarPosition="defaultPosition"
             app:layout_constraintBottom_toTopOf="@+id/botonAniadirLista"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tituloPelicula"
-            app:layout_constraintStart_toEndOf="@id/imagenPelicula"/>
+            app:layout_constraintStart_toEndOf="@id/imagenPelicula"
+            app:layout_constraintTop_toBottomOf="@+id/tituloPelicula" />
 
         <TextView
             android:id="@+id/tituloPelicula"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="TextView"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+            android:text="The Marvels"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@id/imagenPelicula"
-            app:layout_constraintHorizontal_bias="0.18"/>
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.12"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/barraNegra" />
 
         <TextView
             android:id="@+id/textoDisponible"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="TextView"
+            android:text="Disponible en:"
             app:layout_constraintBottom_toTopOf="@+id/plataformasDisponible"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/botonAniadirLista"
-            app:layout_constraintHorizontal_bias="0.05"/>
+            app:layout_constraintHorizontal_bias="0.05"
+            android:textColor="@color/white"/>
 
 
         <TextView
             android:id="@+id/apartadoComentarios"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="TextView"
+            android:text="Comentarios"
             tools:layout_editor_absoluteX="19dp"
             tools:layout_editor_absoluteY="472dp"
             app:layout_constraintTop_toBottomOf="@id/plataformasDisponible"
@@ -72,6 +81,7 @@
             app:layout_constraintBottom_toTopOf="@id/imagenPerfilComentario1"
             app:layout_constraintHorizontal_bias="0.05"
             app:layout_constraintVertical_bias="0.6"
+            android:textColor="@color/white"
             />
 
         <ImageButton
@@ -84,7 +94,10 @@
             app:layout_constraintHorizontal_bias="0.15"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/textoDisponible"
-            tools:srcCompat="@tools:sample/avatars" />
+            android:src="@drawable/cinema"
+            android:background="@android:color/transparent"
+            android:scaleType="centerCrop"
+            />
 
         <ImageView
             android:id="@+id/imagenPerfilComentario1"
@@ -103,25 +116,28 @@
             android:id="@+id/textoComentario1"
             android:layout_width="254dp"
             android:layout_height="36dp"
-            android:text="TextView"
+            android:text="La espero con ansias!"
             app:layout_constraintBottom_toTopOf="@+id/textoComentario2"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/imagenPerfilComentario1"
             app:layout_constraintTop_toBottomOf="@+id/apartadoComentarios"
             android:layout_marginTop="5dp"
-            android:layout_marginBottom="5dp"/>
+            android:layout_marginBottom="5dp"
+            android:textColor="@color/white"/>
 
         <TextView
             android:id="@+id/textoComentario2"
             android:layout_width="254dp"
             android:layout_height="36dp"
-            android:text="TextView"
+            android:text="La primera me encantó"
             app:layout_constraintBottom_toTopOf="@+id/textoComentario3"
             app:layout_constraintStart_toEndOf="@+id/imagenPerfilComentario2"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/textoComentario1"
             android:layout_marginTop="5dp"
-            android:layout_marginBottom="5dp"/>
+            android:layout_marginBottom="5dp"
+            android:textColor="@color/white"
+            />
 
         <ImageView
             android:id="@+id/imagenPerfilComentario2"
@@ -159,59 +175,82 @@
             android:id="@+id/textoComentario3"
             android:layout_width="254dp"
             android:layout_height="36dp"
-            android:text="TextView"
+            android:text="Seguro es malísima"
             app:layout_constraintBottom_toTopOf="@+id/textoComentario4"
             app:layout_constraintStart_toEndOf="@+id/imagenPerfilComentario3"
             app:layout_constraintTop_toBottomOf="@id/textoComentario2"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginTop="5dp"
-            android:layout_marginBottom="5dp"/>
+            android:layout_marginBottom="5dp"
+            android:textColor="@color/white"/>
+        <TextView
+            android:id="@+id/barraNegra"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="@color/black"
+            android:text=""
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0"/>
 
         <TextView
             android:id="@+id/textoComentario4"
             android:layout_width="254dp"
             android:layout_height="36dp"
-            android:text="TextView"
+            android:text="Cuando sale?"
             app:layout_constraintStart_toEndOf="@+id/imagenPerfilComentario4"
             tools:layout_editor_absoluteY="669dp"
             app:layout_constraintTop_toBottomOf="@id/textoComentario3"
             app:layout_constraintBottom_toTopOf="@id/botonAniadirComentario"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginTop="5dp"
-            android:layout_marginBottom="5dp"/>
+            android:layout_marginBottom="5dp"
+            android:textColor="@color/white"/>
 
-        <LinearLayout
-            android:id="@+id/linearLayout"
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/textoPantalla"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
+            android:text="Información"
+            app:layout_constraintBottom_toBottomOf="@+id/barraNegra"
+            app:layout_constraintEnd_toEndOf="@+id/barraNegra"
+            app:layout_constraintStart_toStartOf="@+id/barraNegra"
+            app:layout_constraintTop_toTopOf="@+id/barraNegra"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintVertical_bias="1"
+            android:textColor="#4CAF50"
+            android:textSize="16sp"
+            android:layout_marginStart="5dp"
+            />
+
+        <TextView
+            android:id="@+id/textoMovieFanEncabezado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MovieFan"
+            android:textColor="#4CAF50"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/barraNegra"
+            app:layout_constraintEnd_toStartOf="@id/logoMovieFan"
+            app:layout_constraintHorizontal_bias="1"
+            app:layout_constraintStart_toStartOf="@+id/barraNegra"
             app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1" />
+
+        <ImageView
+            android:id="@+id/logoMovieFan"
+            android:layout_width="89dp"
+            android:layout_height="70dp"
+            android:layout_gravity="right"
+            android:src="@drawable/logomoviefan"
+            app:layout_constraintEnd_toEndOf="@+id/barraNegra"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-          >
-
-            <TextView
-                android:id="@+id/textView2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="TextView" />
-
-            <TextView
-                android:id="@+id/textoMovieFanEncabezado"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="MovieFan"
-                />
-
-            <ImageView
-                android:id="@+id/imageView2"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
-                android:src="@drawable/logomoviefan"
-
-                />
-
-        </LinearLayout>
+            app:layout_constraintTop_toTopOf="@+id/barraNegra"
+            app:layout_constraintBottom_toBottomOf="@id/barraNegra"
+            app:layout_constraintHorizontal_bias="1"
+            />
 
         <ImageButton
             android:id="@+id/botonAniadirLista"
@@ -246,13 +285,15 @@
             android:id="@+id/generoPelicula"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="TextView"
-            app:layout_constraintTop_toBottomOf="@id/imagenPelicula"
-            app:layout_constraintBottom_toTopOf="@id/textoDisponible"
+            android:background="#4CAF50"
+            android:text="Acción"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toTopOf="@id/textoCalificacionUsuarios"
             app:layout_constraintEnd_toStartOf="@id/botonAniadirLista"
+            app:layout_constraintHorizontal_bias="0.057"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintHorizontal_bias="0.13"
-            app:layout_constraintVertical_bias="0.2"/>
+            app:layout_constraintTop_toBottomOf="@id/imagenPelicula"
+            app:layout_constraintVertical_bias="0.6" />
 
         <Button
             android:id="@+id/botonAniadirComentario"
@@ -270,26 +311,29 @@
             android:id="@+id/textoCalificacionPro"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="TextView"
-            app:layout_constraintTop_toBottomOf="@id/imagenPelicula"
+            android:background="#4CAF50"
+            android:text="Ciencia Ficción"
+            android:textColor="@color/white"
             app:layout_constraintBottom_toTopOf="@id/textoCalificacionUsuarios"
-            app:layout_constraintStart_toEndOf="@id/generoPelicula"
             app:layout_constraintEnd_toStartOf="@id/botonAniadirLista"
-            app:layout_constraintHorizontal_bias="0.05"/>
+            app:layout_constraintHorizontal_bias="0.05"
+            app:layout_constraintStart_toEndOf="@id/generoPelicula"
+            app:layout_constraintTop_toBottomOf="@id/imagenPelicula"
+            app:layout_constraintVertical_bias="0.6" />
 
         <TextView
             android:id="@+id/textoCalificacionUsuarios"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="TextView"
-            app:layout_constraintTop_toBottomOf="@id/generoPelicula"
+            android:background="#4CAF50"
+            android:text="sin calificación"
+            android:textColor="@color/white"
             app:layout_constraintBottom_toTopOf="@id/textoDisponible"
-            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toStartOf="@id/botonAniadirLista"
-            app:layout_constraintHorizontal_bias="0.13"
-            />
-
-
+            app:layout_constraintHorizontal_bias="0.069"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/generoPelicula"
+            app:layout_constraintVertical_bias="0.4" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
