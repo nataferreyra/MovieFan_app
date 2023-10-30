@@ -9,6 +9,9 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.SearchView;
 import android.os.Bundle;
+import android.widget.TextView;
+
+import org.w3c.dom.Text;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -16,6 +19,33 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Idioma.cambiar();
+
+        TextView bienvenida=findViewById(R.id.textoBienvenida);
+        TextView catalo=findViewById(R.id.botonCatalogo);
+        TextView dest=findViewById(R.id.botonDestacados);
+        TextView list=findViewById(R.id.botonListas);
+        TextView platf=findViewById(R.id.textoPlataformas);
+        TextView estr=findViewById(R.id.textoEstrenos);
+        String estre="Estrenos mas esperados!";
+        String estreEng="Most anticipated premieres!";
+        String plat="Plataformas";
+        String platEng="Streaming Platforms";
+        String lists="Listas";
+        String listEng="Lists;";
+        String des="Destacado";
+        String desEng="outstanding";
+        String cat="Catalogo";
+        String catEng="Catalogue";
+        String msj="Bienvenidos a nuestra comunidad MovieFan, donde te proporcionamos información sobre las peliculas que mas te interesan o que estas buscando, con la oportunidad de que puedas compartir tu opinion con nuestros criticers y a la vez ver una amplia cartelera la cual nos motivara a descubrir nuevas aventuras. Sumate a esta entretenida comunidad!!";
+        String msjEng="Welcome to our MovieFan community, where we provide you with information about the movies that interest you most or that you are looking for, with the opportunity for you to share your opinion with our critics and at the same time see a wide billboard which will motivate us to discover new adventures . . Join this entertaining community!!";
+        bienvenida.setText(msj);
+        catalo.setText(cat);
+        dest.setText(des);
+        list.setText(lists);
+        platf.setText(plat);
+        estr.setText(estre);
+
 
         Button catalogobut=findViewById(R.id.botonCatalogo);
         Button listabut=findViewById(R.id.botonListas);
@@ -82,8 +112,23 @@ public class MainActivity extends AppCompatActivity {
         });
 
         destacadobut.setOnClickListener(view -> {
-            Intent i=new Intent(MainActivity.this, loggin.class);
-            startActivity(i);
+            if (Idioma.getIdioma()){
+                bienvenida.setText(msj);
+                catalo.setText(cat);
+                dest.setText(des);
+                list.setText(lists);
+                platf.setText(plat);
+                estr.setText(estre);
+                Idioma.cambiar();
+            }else{
+                bienvenida.setText(msjEng);
+                catalo.setText(catEng);
+                dest.setText(desEng);
+                list.setText(listEng);
+                platf.setText(platEng);
+                estr.setText(estreEng);
+                Idioma.cambiar();
+            }
         });
 
         SearchView searchView = findViewById(R.id.busquedabarra);
@@ -113,6 +158,11 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+
+
+
+
+
+    }
     }
 
-}

@@ -28,7 +28,6 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="7dp"
         android:justificationMode="inter_word"
-        android:text="Bienvenidos a nuestra comunidad MovieFan, donde te proporcionamos información sobre las peliculas que mas te interesan o que estas buscando, con la oportunidad de que puedas compartir tu opinion con nuestros criticers y a la vez ver una amplia cartelera la cual nos motivara a descubrir nuevas aventuras. Sumate a ‘esta entretenida comunidad!!"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="@+id/fotoFondo"
         app:layout_constraintEnd_toEndOf="parent"
@@ -67,7 +66,6 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="7dp"
         android:backgroundTint="#4CAF50"
-        android:text="Catálogo"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/fotoFondo" />
@@ -77,7 +75,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="#4CAF50"
-        android:text="Destacados"
         android:textStyle="bold"
         app:layout_constraintEnd_toStartOf="@+id/botonListas"
         app:layout_constraintStart_toEndOf="@+id/botonCatalogo"
@@ -89,7 +86,6 @@
         android:layout_height="wrap_content"
         android:layout_marginRight="7dp"
         android:backgroundTint="#4CAF50"
-        android:text="Listas"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/fotoFondo" />
@@ -99,7 +95,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="7dp"
-        android:text="Estrenos más esperados!"
 
         android:textColor="@color/white"
         android:textStyle="bold"
@@ -195,7 +190,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="7dp"
-        android:text="Plataformas"
         android:textColor="@color/white"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@id/plataforma1"
