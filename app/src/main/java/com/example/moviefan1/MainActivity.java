@@ -3,15 +3,13 @@ package com.example.moviefan1;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.media.Image;
-import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.SearchView;
 import android.os.Bundle;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
+import java.util.concurrent.atomic.AtomicReference;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -39,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
         String catEng="Catalogue";
         String msj="Bienvenidos a nuestra comunidad MovieFan, donde te proporcionamos información sobre las peliculas que mas te interesan o que estas buscando, con la oportunidad de que puedas compartir tu opinion con nuestros criticers y a la vez ver una amplia cartelera la cual nos motivara a descubrir nuevas aventuras. Sumate a esta entretenida comunidad!!";
         String msjEng="Welcome to our MovieFan community, where we provide you with information about the movies that interest you most or that you are looking for, with the opportunity for you to share your opinion with our critics and at the same time see a wide billboard which will motivate us to discover new adventures . . Join this entertaining community!!";
+        AtomicReference<String> descp1= new AtomicReference<>("Carol Danvers, alias Capitana Marvel, ha recuperado su identidad de los tiránicos Kree y se ha vengado de la Inteligencia Suprema. Pero las consecuencias imprevistas hacen que Carol cargue con el peso de un universo desestabilizado. Cuando sus deberes la envían a un agujero de gusano anómalo vinculado a un revolucionario Kree, sus poderes se enredan con los de la superfan oriunda de la ciudad de Jersey, Kamala Khan, alias Ms. Marvel, y la sobrina distanciada de Carol, la ahora astronauta de S.A.B.E.R., la Capitana Monica Rambeau. Juntos, este trío improbable deberá formar equipo y aprender a trabajar en conjunto para salvar el universo como THE MARVELS");
         bienvenida.setText(msj);
         catalo.setText(cat);
         dest.setText(des);
@@ -73,6 +72,7 @@ public class MainActivity extends AppCompatActivity {
 
         peli1.setOnClickListener(view -> {
             Intent i=new Intent(MainActivity.this, vistaPeliculas.class);
+            i.putExtra("txt", descp1.get());
             startActivity(i);
         });
 
@@ -119,8 +119,10 @@ public class MainActivity extends AppCompatActivity {
                 list.setText(lists);
                 platf.setText(plat);
                 estr.setText(estre);
+                descp1.set("Carol Danvers, alias Capitana Marvel, ha recuperado su identidad de los tiránicos Kree y se ha vengado de la Inteligencia Suprema. Pero las consecuencias imprevistas hacen que Carol cargue con el peso de un universo desestabilizado. Cuando sus deberes la envían a un agujero de gusano anómalo vinculado a un revolucionario Kree, sus poderes se enredan con los de la superfan oriunda de la ciudad de Jersey, Kamala Khan, alias Ms. Marvel, y la sobrina distanciada de Carol, la ahora astronauta de S.A.B.E.R., la Capitana Monica Rambeau. Juntos, este trío improbable deberá formar equipo y aprender a trabajar en conjunto para salvar el universo como THE MARVELS");
                 Idioma.cambiar();
             }else{
+                descp1.set("Carol Danvers, aka Captain Marvel, has reclaimed her identity from the tyrannical Kree and taken revenge on the Supreme Intelligence. But unforeseen consequences leave Carol bearing the weight of a destabilized universe. When her duties send her into a hole of An anomalous worm linked to a Kree revolutionary, his powers become entangled with those of Jersey City superfan Kamala Khan, aka Ms. Marvel, and Carol's estranged niece, now S.A.B.E.R. astronaut Captain Monica Rambeau. Together, this unlikely trio must team up and learn to work together to save the universe as THE MARVELS.");
                 bienvenida.setText(msjEng);
                 catalo.setText(catEng);
                 dest.setText(desEng);

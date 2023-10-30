@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 public class vistaPeliculas extends AppCompatActivity {
 
@@ -43,6 +44,14 @@ public class vistaPeliculas extends AppCompatActivity {
 
             dialog.show();
         });
+
+        TextView hjk=findViewById(R.id.descripcionPelicula);
+
+        if (getIntent().hasExtra("txt")) {
+            String textoRecibido = getIntent().getStringExtra("txt");
+            hjk.setText(textoRecibido);
+        }
+
 
 
 

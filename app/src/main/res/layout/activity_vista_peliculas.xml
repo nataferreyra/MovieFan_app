@@ -32,7 +32,6 @@
             android:id="@+id/descripcionPelicula"
             android:layout_width="222dp"
             android:layout_height="wrap_content"
-            android:text="Carol Danvers, alias Capitana Marvel, ha recuperado su identidad de los tiránicos Kree y se ha vengado de la Inteligencia Suprema. Pero las consecuencias imprevistas hacen que Carol cargue con el peso de un universo desestabilizado. Cuando sus deberes la envían a un agujero de gusano anómalo vinculado a un revolucionario Kree, sus poderes se enredan con los de la superfan oriunda de la ciudad de Jersey, Kamala Khan, alias Ms. Marvel, y la sobrina distanciada de Carol, la ahora astronauta de S.A.B.E.R., la Capitana Monica Rambeau. Juntos, este trío improbable deberá formar equipo y aprender a trabajar en conjunto para salvar el universo como THE MARVELS"
             android:textColor="@color/white"
             android:textSize="11sp"
             android:verticalScrollbarPosition="defaultPosition"
