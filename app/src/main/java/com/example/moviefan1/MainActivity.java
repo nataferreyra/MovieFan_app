@@ -30,9 +30,9 @@ public class MainActivity extends AppCompatActivity {
         String plat="Plataformas";
         String platEng="Streaming Platforms";
         String lists="Listas";
-        String listEng="Lists;";
-        String des="Destacado";
-        String desEng="outstanding";
+        String listEng="Lists";
+        String des="Cambiar a Inglés";
+        String desEng="Change to Spanish";
         String cat="Catalogo";
         String catEng="Catalogue";
         String msj="Bienvenidos a nuestra comunidad MovieFan, donde te proporcionamos información sobre las peliculas que mas te interesan o que estas buscando, con la oportunidad de que puedas compartir tu opinion con nuestros criticers y a la vez ver una amplia cartelera la cual nos motivara a descubrir nuevas aventuras. Sumate a esta entretenida comunidad!!";
